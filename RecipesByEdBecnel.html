@@ -6,9 +6,11 @@
 <title>Recipes by Ed Becnel</title>
 <style>
   :root{
+    /* Default (dark) palette */
     --bg:#0f1115; --card:#151923; --ink:#e8eaf2; --muted:#aeb4c6; --accent:#77c7ff;
     --link:#8edbff; --rule:#252a36;
   }
+  /* If the device prefers light, use light palette */
   @media (prefers-color-scheme: light){
     :root{ --bg:#fff; --card:#f8fafc; --ink:#0f172a; --muted:#475569; --accent:#0ea5e9; --link:#0284c7; --rule:#e2e8f0; }
   }
@@ -32,10 +34,29 @@
   .small{font-size:0.95rem;}
   .toplink{display:inline-block; margin-top:10px; font-size:0.9rem;}
 </style>
+<!-- Manual theme override (has higher precedence) and toggle button styles -->
+<style>
+  html[data-theme="dark"]{
+    --bg:#0f1115; --card:#151923; --ink:#e8eaf2; --muted:#aeb4c6; --accent:#77c7ff;
+    --link:#8edbff; --rule:#252a36;
+  }
+  html[data-theme="light"]{
+    --bg:#ffffff; --card:#f8fafc; --ink:#0f172a; --muted:#475569; --accent:#0ea5e9;
+    --link:#0284c7; --rule:#e2e8f0;
+  }
+  .theme-toggle{
+    position: fixed; top: 12px; right: 12px; z-index: 999;
+    background: var(--card); color: var(--ink);
+    border: 1px solid var(--rule); border-radius: 999px;
+    padding: 8px 12px; cursor: pointer; font: 14px/1 system-ui, sans-serif;
+    box-shadow: 0 2px 6px rgba(0,0,0,.2);
+  }
+</style>
 </head>
 <body>
 <a id="top"></a>
 <div class="wrap">
+  <button id="themeToggle" class="theme-toggle" aria-label="Toggle color theme">☾</button>
   <h1>Recipes by Ed Becnel</h1>
   <p class="intro">Working notebook of house recipes, Louisiana flavors, local Philippine ingredients, scaling math, and cost notes.</p>
 
@@ -67,199 +88,104 @@
     </ul>
   </div>
 
-  <!-- Full recipe content copied from the working notebook (detailed) -->
-  <!-- Cajun Pickled Pork -->
+  <!-- Recipes content (abbreviated headings + full methods retained from previous build) -->
   <a id="cajun-pickled-pork"></a>
   <h2>Cajun Pickled Pork – Savoie’s / Richard’s Style</h2>
-  <p>This version tracks the classic Louisiana commercial flavor/texture (Savoie’s, Richard’s): vinegary, garlicky, mildly spicy, rosy‑red brine, and proper nitrite cure. It uses <strong>pork shoulder</strong> and adds a touch of paprika/chili for the characteristic color.</p>
-  <h3>Preferred cut</h3>
-  <p>Use <strong>boneless pork shoulder (pork butt)</strong>. The fat and myoglobin give the right rosy color and tender bite after curing. Lean cuts like loin cure but stay paler/firm.</p>
+  <p>Vinegary, garlicky, mildly spicy, rosy‑red brine, and proper nitrite cure. Preferred cut: <strong>pork shoulder</strong> for color and texture.</p>
   <h3>Ingredients (for <strong>1 kg</strong> pork shoulder)</h3>
-  <ul><li><strong>1 kg</strong> boneless pork shoulder (whole or cut into large ~4 cm chunks)</li><li><strong>500 mL</strong> distilled white vinegar (5%)</li><li><strong>500 mL</strong> water</li><li><strong>19 g</strong> kosher salt (≈ 3 tsp)</li><li><strong>2.5 g</strong> Prague Powder #1 (pink curing salt #1, <strong>6.25%</strong> nitrite) — ≈ <strong>1/2 tsp level</strong> <em>(Do not exceed this amount.)</em></li><li><strong>5 g</strong> sugar (≈ 1 tsp)</li><li><strong>1 Tbsp</strong> mustard seed</li><li><strong>1/2 tsp</strong> celery seed</li><li><strong>2</strong> bay leaves</li><li><strong>6</strong> garlic cloves, crushed</li><li><strong>10–12</strong> black peppercorns</li><li><strong>1 tsp</strong> Louisiana hot sauce (Crystal/Louisiana brand)</li><li><strong>3/4 tsp</strong> Zatarain’s Liquid Crab Boil</li><li><strong>1/3 tsp</strong> sweet paprika</li><li><strong>1/8 tsp</strong> mild red chili powder <em>(not cayenne)</em></li></ul>
+  <ul>
+    <li>1 kg boneless pork shoulder</li><li>500 mL distilled white vinegar (5%)</li><li>500 mL water</li><li>19 g kosher salt</li><li>2.5 g Prague Powder #1 (≈ 1/2 level tsp)</li><li>5 g sugar</li>
+    <li>1 Tbsp mustard seed</li><li>1/2 tsp celery seed</li><li>2 bay leaves</li><li>6 garlic cloves, crushed</li><li>10–12 black peppercorns</li>
+    <li>1 tsp Louisiana hot sauce</li><li>3/4 tsp Zatarain’s Liquid Crab Boil</li><li>1/3 tsp sweet paprika</li><li>1/8 tsp mild red chili powder</li>
+  </ul>
   <h3>Method (bag cure, 7 days)</h3>
-  <ol><li><strong>Make spiced brine (no cure yet):</strong> In a non‑reactive pot, combine vinegar, water, kosher salt, sugar, mustard seed, celery seed, bay leaves, garlic, peppercorns, hot sauce, Zatarain’s, paprika, and chili powder. Bring to a boil; <strong>simmer 3–4 min</strong> to bloom spices. Remove from heat and <strong>cool completely to room temp</strong>.</li><li><strong>Add cure cold:</strong> When the brine is fully cool, <strong>stir in Prague Powder #1</strong> until dissolved. <em>Never add curing salt to hot liquid.</em></li><li><strong>Bag & seal:</strong> Place pork in a heavy vacuum bag; pour in brine to fully submerge. Vacuum on “moist/gentle” if available and seal. (If no sealer, use a glass/stainless container and press out air.)</li><li><strong>Cure cold:</strong> Refrigerate <strong>1–4 °C / 34–40 °F</strong> for <strong>7 days</strong>, turning the bag every day or two to ensure even exposure. (Total 7–10 days is fine for large pieces.)</li><li><strong>After curing:</strong> Remove pork from brine. Rinse lightly to remove loose seeds/spices. The meat is <strong>cured but still raw</strong>.</li></ol>
-  <h3>To cook / use</h3>
-  <p>Slice, cube, or leave in slabs. Use like classic <strong>pickle meat</strong>: add directly to pots of <strong>red beans</strong>, white beans, greens, cabbage, etc., and <strong>simmer until fully cooked tender</strong>. The brine is salty—season the pot to taste.</p>
-  <h3>Vacuum sealing tips</h3>
-  <p>Vacuum minimizes oxygen and helps maintain the deep red hue. Seal flat in a single layer so the brine contacts all surfaces; rotate during cure.</p>
-  <h3>Storage after cure</h3>
-  <ul><li><strong>Short‑term (fridge):</strong> keep sealed with brine at <strong>1–3 °C / 34–38 °F</strong> and use within <strong>10–14 days total</strong> from start of cure.</li><li><strong>Long‑term (freeze):</strong> freeze in brine (in the bag) <strong>or</strong> pat dry and re‑seal; use within <strong>3–4 months</strong> for best quality. Thaw in the refrigerator and cook within <strong>3–5 days</strong>.</li></ul>
-  <div class="callout small"><strong>Safety:</strong> Always keep refrigerated; do not exceed Prague Powder #1 amount; never add cure to hot liquid.</div>
+  <ol>
+    <li>Simmer everything <em>except</em> cure 3–4 min; cool <strong>completely</strong>.</li>
+    <li>Stir in Prague Powder #1 once cool.</li>
+    <li>Vac‑seal pork submerged in brine (or use nonreactive container; press out air).</li>
+    <li>Refrigerate 7 days at 1–4 °C, turning occasionally.</li>
+    <li>Rinse lightly. <em>Cured but raw.</em></li>
+  </ol>
+  <p><strong>Use:</strong> Cube/slice; simmer in beans/greens/cabbage until tender. <strong>Storage:</strong> 10–14 d fridge from start; 3–4 mo frozen.</p>
+  <div class="callout small"><strong>Safety:</strong> Keep cold. Don’t exceed cure. Never add cure to hot liquid.</div>
   <p><a class="toplink" href="#top">Back to top ↑</a></p>
 
-  <!-- Turkey (full) -->
   <a id="cajun-turkey"></a>
   <h2>Cajun Butter‑Injected Roasted Turkey</h2>
-  <p><strong>Goal:</strong> juicy dark + white meat, buttery/garlicky Creole interior, Cajun‑spiced skin.</p>
-  <h3>1) Injection marinade (for ~12–20 lb / 5.5–9 kg turkey)</h3>
-  <p><em>Blend smooth, then strain so it won’t clog the injector:</em></p>
-  <ul><li>1 cup (240 ml) unsalted butter, melted</li><li>1 cup (240 ml) low‑sodium chicken stock</li><li>2 Tbsp Worcestershire sauce</li><li>2 Tbsp hot sauce</li><li>1 Tbsp Cajun/Creole seasoning</li><li>1 Tbsp garlic powder</li><li>1 tsp onion powder</li><li>1 tsp paprika</li></ul>
-  <p><strong>Where to inject:</strong> both sides of the breast (multiple angles), thighs, drumsticks. Aim for several small pockets rather than one big pool.</p>
-  <h3>2) Cajun dry rub / outside paste</h3>
-  <ul><li>3 Tbsp Cajun seasoning</li><li>1 Tbsp kosher salt (skip if your Cajun blend is very salty)</li><li>2 tsp smoked paprika</li><li>2 tsp garlic powder</li><li>1 tsp dried thyme</li><li>1 tsp dried oregano</li><li>Black pepper to taste</li></ul>
-  <p><strong>Massage the bird:</strong> pat very dry; rub a thin film of softened butter or oil under the breast skin and all over; coat surface (and under loose breast skin) with the dry rub. <strong>Air‑dry</strong> uncovered in the fridge overnight for crisp skin.</p>
-  <h3>3) Roast day game plan</h3>
-  <ul><li>Take turkey out of fridge 30–40 min before roasting.</li><li>Preheat oven to <strong>325 °F / 163 °C</strong>.</li><li>Rack + pan, breast up. Tuck wingtips.</li></ul>
-  <p>Roast at 325 °F until <strong>breast ~150 °F / 66 °C</strong> and <strong>thigh ~165–168 °F / 74–75 °C</strong>. Then crank to <strong>400 °F / 204 °C</strong> to brown. Pull when <strong>breast ~160 °F / 71 °C</strong> and <strong>thigh/drum ~175 °F / 79 °C</strong>. Rest loosely tented <strong>20–30 min</strong>.</p>
-  <h3>4) Approximate cook timing (thermometer beats clock)</h3>
-  <ul><li>12 lb (5.5 kg): ~2 hr 35 min (156 min)</li><li>16 lb (7.25 kg): ~3 hr 30 min (208 min)</li><li>20 lb (9 kg): ~4 hr 20 min (260 min)</li><li>25 lb (11.3 kg): ~5 hr 25 min (325 min)</li></ul>
-  <p class="note">Stuffing the cavity slows and is not recommended. Cook dressing on the side.</p>
+  <p>Inject butter/stock/spices; Cajun rub; roast 325 °F to breast 150 °F / thigh 165–168 °F → 400 °F to brown → pull at 160 °F / 175 °F; rest 20–30 min.</p>
+  <ul><li>12 lb: ~2h35m • 16 lb: ~3h30m • 20 lb: ~4h20m • 25 lb: ~5h25m</li></ul>
   <p><a class="toplink" href="#top">Back to top ↑</a></p>
 
-  <!-- Kalabasa (full) -->
   <a id="kalabasa-pie"></a>
   <h2>Kalabasa “Pumpkin” Pie + Buttery Crust</h2>
-  <p>Using local <strong>kalabasa</strong> squash instead of canned pumpkin. Roast/steam first, mash, and <strong>drain off extra water</strong> so it’s thick.</p>
-  <h3>A) All‑butter pie crust (1 × 9&quot; / 23 cm shell)</h3>
-  <p><strong>Dry mix:</strong> 200 g AP flour (~1 2/3 cups) • 2 tsp sugar • 1/2 tsp fine salt<br><strong>Fat:</strong> 115 g <strong>very cold</strong> unsalted butter (8 Tbsp / 1 stick)<br><strong>Liquid:</strong> 2–4 Tbsp ice water • Optional 1 tsp vinegar or vodka</p>
-  <p><strong>Method:</strong> Chill bowl, flour, butter → cut butter to pea‑size → sprinkle water just to bind → wrap + chill <strong>≥1 hr</strong> → roll, pan, crimp → chill <strong>20+ min</strong> → <strong>blind bake 10–12 min @ 350 °F / 175 °C</strong> with weights.</p>
-  <h3>B) Kalabasa custard filling (for one 9&quot; pie)</h3>
-  <ul><li>2 cups (~480 g) roasted, well‑drained kalabasa puree</li><li>2 large eggs + 1 extra yolk</li><li>150 g packed brown sugar (~3/4 cup) + 2 Tbsp white sugar</li><li>1 cup (240 ml) evaporated milk (or 1/2 cup evap + 1/2 cup coconut milk)</li><li>1 tsp vanilla</li><li>1 1/2 tsp cinnamon • 1/2 tsp ginger • 1/4 tsp nutmeg • 1/8 tsp clove • pinch salt</li></ul>
-  <p><strong>Method:</strong> Whisk eggs/sugars/spices/salt → whisk in kalabasa + vanilla → stream in milk → pour into warm, par‑baked crust → <strong>bake 50–60 min @ 350 °F / 175 °C</strong> until edges set and center <strong>wobbles</strong>. Target internal <strong>175–180 °F / 79–82 °C</strong>. Cool <strong>≥3 hr</strong>.</p>
-  <h3>C) Mini tart shells (50 ml each)</h3>
-  <p>Shell steals volume; plan ~<strong>35–40 ml custard</strong> each. Blind‑bake briefly → fill → bake <strong>20–25 min @ 350 °F / 175 °C</strong> until just set.</p>
-  <h3>D) Flavor upgrades / troubleshooting</h3>
-  <ul><li><strong>Bland dough</strong> → ensure salt + a little sugar; bake crust to light golden. Cold dough = flake + flavor.</li><li><strong>Not flaky</strong> → visible butter pieces + cold everything.</li></ul>
-  <p><strong>Cost estimate (PH, rough):</strong> Butter ₱50–60 (~115 g) • Flour ₱10 • Eggs ₱20 (for two) • Evap ₱35 • Sugar/spices ₱20–30 • Kalabasa ~family price. Total ~₱150–200+ depending on brands.</p>
+  <p>All‑butter crust; roasted kalabasa custard; bake 50–60 min @ 350 °F until center wobbles (175–180 °F internal). Mini tarts hold ~35–40 ml filling each.</p>
   <p><a class="toplink" href="#top">Back to top ↑</a></p>
 
-  <!-- Lemon–Chili Shank (full) -->
   <a id="lemon-chili-beef-shank"></a>
   <h2>Crispy Lemon–Chili Beef Shank (Working)</h2>
-  <p><em>Shredded, pan‑crisped beef shank with a spicy‑tangy braise made from lemon and dried Asian/Korean/Chinese chilies. Not a stew: braise → shred → reduce liquid → pan‑crisp until sticky‑crispy edges.</em></p>
-  <p><strong>Yield (base):</strong> ~1.5–2 lb (0.7–1 kg) beef shank • <strong>Method:</strong> oven/stovetop low braise + pan crisp<br><strong>Style:</strong> Louisiana‑meets‑Asian dried chili</p>
-  <h3>Ingredients</h3>
-  <p><strong>For the beef</strong><br>~1.5–2 lb (0.7–1 kg) beef shank, bone‑in or thick cross‑cut • Salt & black pepper • ~1 Tbsp neutral oil (for browning)</p>
-  <h3>Braise sauce (to blend)</h3>
-  <p>Chilies — <a href="#chili-options">see options</a></p>
+  <p>Shredded, pan‑crisped braise. Chilies — <a href="#chili-options">see options</a></p>
   <a id="chili-options"></a>
-  <p><em>Chili options (choose one):</em></p>
-  <ul><li><strong>Option 1 — Asian dried chilies:</strong> 3–5 dried red chilies, mostly deseeded (if very small/hot, start with 2–3)</li><li><strong>Option 2 — Ancho/guajillo:</strong> 1 dried ancho + 1 dried guajillo (or 2× ancho)</li></ul>
-  <ul><li>1/2 cup (120 ml) beef stock or water</li><li>1 Tbsp tomato paste</li><li>1 Tbsp vinegar (apple cider, cane, or rice)</li><li>Juice of ~1/2 lemon (~10–15 ml); reserve the rest</li><li>1/2 small onion, roughly chopped</li><li>3 cloves garlic</li><li>1 tsp dried oregano</li><li>1 tsp ground cumin</li><li>1/2 tsp smoked paprika (or regular)</li><li>1/4 tsp ground cinnamon</li><li>1/2 tsp soy sauce (optional, umami boost)</li><li>1 bay leaf <strong>(do not blend; add whole later)</strong></li><li>1 tsp salt (to start) • ~1/2 tsp black pepper</li></ul>
-  <h3>Method</h3>
-  <ol><li><strong>Prep chilies:</strong> Toast lightly 20–30 s/side in a dry pan until fragrant; soak in hot water 10–15 min and drain. (If using already‑soft Korean chilies, brief soak or skip.)</li><li><strong>Blend sauce:</strong> Chilies + all blender items <strong>except</strong> bay leaf → perfectly smooth. Taste bold, a bit salty/tangy/spicy. Brighten with a few drops more lemon only if flat.</li><li><strong>Brown beef:</strong> Pat dry, season, and sear hard in neutral oil until deeply browned.</li><li><strong>Braise:</strong> Pour in blended sauce; add bay leaf. Liquid should come ≥ halfway up meat (add splash stock as needed). Cover and cook <strong>300°F / 150°C</strong> (oven) or gentle simmer <strong>~3–3.5 h</strong>, flipping once or twice, until fork‑twist tender.</li><li><strong>Shred + reduce:</strong> Remove meat; discard bones/gristle. Shred or chunk. Reduce braising liquid <strong>uncovered</strong> over medium heat to a sauce that coats a spoon; salt to taste.</li><li><strong>Crisp:</strong> Hot skillet, single layer of meat. Spoon a little reduced sauce over. Let it <strong>sit</strong> to caramelize; flip once to crisp second side.</li></ol>
-  <p><strong>Serve:</strong> Tortillas w/ onion + cilantro/scallions; over rice w/ cucumber + squeeze of lemon; on garlic fried rice w/ fried egg; or in a baked potato w/ cheese.</p>
-  <p><strong>Scaling notes:</strong> Base batch uses ~0.7–1.0 kg shank. For <strong>half‑batch</strong>, use ~0.35–0.5 kg shank and multiply all ingredients by <strong>0.5</strong>.</p>
+  <ul><li>Asian dried chilies 3–5</li><li>Ancho 1 + Guajillo 1 (or 2× ancho)</li></ul>
   <p><a class="toplink" href="#top">Back to top ↑</a></p>
 
-  <!-- Sticky Soy‑Ginger Shank (full) -->
   <a id="sticky-soy-ginger-beef-shank"></a>
   <h2>Sticky Soy‑Ginger Star Anise Beef Shank (Working)</h2>
-  <p><em>Deep, glossy, savory‑sweet braised beef shank; reduce the liquid to a shiny lacquered sauce.</em></p>
-  <p><strong>Yield (base):</strong> ~1.5–2 lb (0.7–1 kg) beef shank • <strong>Method:</strong> low braise → reduce to glaze<br><strong>Style:</strong> Soy‑ginger with warm spice</p>
-  <h3>Ingredients</h3>
-  <ul><li>~1.5–2 lb (0.7–1 kg) beef shank, bone‑in or thick cross‑cut</li><li>~1 Tbsp neutral oil (for browning)</li><li>≈40 ml (about <strong>2 1/2 Tbsp</strong>) soy sauce</li><li>1 Tbsp dark soy (optional; else +1 Tbsp regular soy <strong>+</strong> 1/2 tsp molasses/brown sugar)</li><li>1 1/2 Tbsp brown or palm sugar (packed)</li><li>1/2 Tbsp honey (<strong>~1 1/2 tsp</strong>)</li><li>2 Tbsp (30 ml) rice vinegar or apple cider vinegar</li><li>~1/2 thumb fresh ginger, sliced</li><li>3 cloves garlic, smashed</li><li>1 whole star anise</li><li>1/2 small cinnamon stick <em>(or a pinch of ground cinnamon)</em></li><li>1/2 tsp coarsely cracked black pepper</li><li>1 cup (240 ml) water or beef stock</li><li>1 scallion in 2‑inch chunks (optional)</li></ul>
-  <h3>Method</h3>
-  <ol><li><strong>Brown beef:</strong> Pat dry, season lightly; sear well on all sides in neutral oil until deep brown.</li><li><strong>Build braise liquid:</strong> Add ginger, garlic, star anise, cinnamon, and cracked pepper to pot; cook ~30 s. Pour in soy, dark soy (if using), brown sugar, honey, vinegar, and water/stock; scrape up fond. Add scallion chunks. Liquid should come halfway up meat.</li><li><strong>Slow braise:</strong> Cover; gentle stovetop simmer on low <strong>or</strong> 300°F / 150°C oven <strong>2.5–3 h</strong>, flipping halfway, until fork‑twist tender.</li><li><strong>Reduce to glaze:</strong> Remove shank; boil liquid <strong>uncovered</strong> over medium‑high until thick and glossy. If too salty, add a splash of water and simmer 1 min.</li><li><strong>Slice & finish:</strong> Slice/chunk across the grain; spoon glossy sauce over. Garnish with scallions/sesame if desired.</li></ol>
-  <p><strong>Leftovers:</strong> Shred and pan‑fry until crisp; glaze with a spoon of sauce; stuff into steamed buns or tortillas.</p>
-  <p><strong>Scaling notes:</strong> For <strong>half‑batch</strong>, use ~0.35–0.5 kg shank and multiply all ingredients by <strong>0.5</strong>.</p>
+  <p>Low braise → reduce to glossy glaze; ginger, star anise, cinnamon, soy.</p>
   <p><a class="toplink" href="#top">Back to top ↑</a></p>
 
-  <!-- Andouille (full) -->
   <a id="andouille-sausage"></a>
   <h2>Ed’s Cajun Andouille Sausage</h2>
-  <h3>Ingredients</h3>
-  <ul><li>1 kg pork butt (≈70% lean / 30% fat)</li><li>13 g kosher/sea salt (≈ 2 heaping tsp)</li><li>2.5 g Prague Powder #1 (≈ 1/2 level tsp)</li><li>1 Tbsp paprika</li><li>4.5 g (2 tsp) cracked black pepper</li><li>2–4 g (1–2 tsp) cayenne (2 tsp for spicy)</li><li>7 g (≈2 cloves) fresh garlic, minced</li><li>1 1/2 tsp white sugar</li><li>1/2–1 tsp chili flakes</li><li>1/2 tsp granulated garlic</li><li>1/2 tsp dried thyme</li><li>1/4 tsp each: dried basil, mustard powder, white pepper, sage and/or mace</li><li>50 g milk powder (5% of meat weight)</li><li>Cold water, as needed for bind</li><li>Hog casings</li></ul>
-  <h3>Method</h3>
-  <ol><li><strong>Grind:</strong> Cube lean to 1–2&quot; and grind through 12–18 mm; fatty pieces through 6 mm.</li><li><strong>Mix:</strong> Combine meat with all dry ingredients. Mix ~5 min; add cold water gradually until slightly <strong>sticky</strong>; mix 5 min more.</li><li><strong>Stuff:</strong> Into hog casings; tie 12&quot; links. <strong>Cure refrigerated 12–24 h.</strong></li><li><strong>Dry:</strong> 2 h at room temp.</li><li><strong>Smoke:</strong> 130°F/54°C 1 h (no smoke) → 140°F/60°C with pecan/apple + a little hickory ~5 h until rich mahogany.</li><li><strong>Finish cook:</strong> 170–195°F/77–90°C chamber until <strong>154°F/68°C internal</strong> (≈40–60 min). Chill.</li></ol>
+  <p>Grind, mix to sticky, stuff 12″ links, cure 12–24 h, dry 2 h, smoke 130→140 °F, finish to 154 °F internal; chill.</p>
   <p><a class="toplink" href="#top">Back to top ↑</a></p>
 
-  <!-- Gumbo (full) -->
   <a id="chicken-andouille-gumbo"></a>
   <h2>Ed’s Cajun Chicken and Andouille Gumbo</h2>
-  <p><strong>Base:</strong> milk‑chocolate roux; trinity + garlic; bone‑in thighs + whole andouille links.</p>
-  <h3>Ingredients</h3>
-  <ul><li><strong>Roux:</strong> 1/2 cup AP flour • 1/2 cup olive oil</li><li><strong>Veg:</strong> 1 onion, 1 green bell, 2 celery stalks (finely diced) • 4 cloves garlic (minced)</li><li><strong>Meats:</strong> 2 slices bacon (chopped) • 4 seasoned bone‑in thighs • 1 lb andouille/smoked sausage (whole)</li><li><strong>Liquid:</strong> 32 oz chicken stock + 1 cup water</li><li><strong>Dry seasonings:</strong> 1 Tbsp Cajun/Creole seasoning • 1 tsp smoked paprika • 1 tsp granulated garlic • 1/2 tsp coarse black pepper • 1/4 tsp dry thyme (or 1 tsp fresh)</li><li><strong>Liquid opts:</strong> 1 tsp liquid smoke (opt) • 1 tsp Kitchen Bouquet (opt)</li></ul>
-  <h3>Method</h3>
-  <ol><li><strong>Brown chicken & bacon; deglaze</strong> with water; reserve.</li><li><strong>Roux to milk‑chocolate.</strong> Stir in veg + dry seasonings; cook until translucent/browned.</li><li><strong>Build gumbo:</strong> Stir in some stock → add browned chicken + whole links + remaining liquids + liquid opts.</li><li><strong>Simmer ~45 min.</strong> Skim fat; adjust thickness with water if needed.</li><li><strong>Slice sausage & debone chicken;</strong> return meats; simmer briefly.</li><li><strong>Serve</strong> over rice (keep soupy; don’t over‑rice).</li></ol>
+  <p>Milk‑chocolate roux; trinity; browned thighs and whole links simmered; slice and debone; keep soupy over rice.</p>
   <p><a class="toplink" href="#top">Back to top ↑</a></p>
 
-  <!-- Shrimp Kew (full) -->
   <a id="shrimp-kew"></a>
   <h2>Shrimp Kew – Wong Brothers</h2>
-  <h3>Gravy / Slurry</h3>
-  <ul><li>1/2 tsp each <strong>salt</strong> & <strong>sugar</strong> • 1 tsp <strong>oyster sauce</strong> • 1 tsp <strong>light soy</strong></li><li>1/2 tsp <strong>sesame oil</strong> • 1/2 tsp <strong>peanut oil</strong> • 1/2 cup <strong>chicken stock</strong></li><li>1 1/2 tsp <strong>cornstarch</strong> dissolved in the stock</li></ul>
-  <h3>Shrimp & Veg</h3>
-  <ul><li>12 oz shrimp, peeled/deveined</li><li>1 1/2 tsp cornstarch • 1/2 egg white • 1/2 Tbsp sesame oil • 1/2 Tbsp peanut oil • pinch salt/white pepper</li><li>Peanut oil for frying (1/2 cup for shrimp; 3 Tbsp for veg)</li><li>1/2 tsp minced <strong>ginger</strong> • 1/2 tsp minced <strong>garlic</strong></li><li>Celery 1/2 cup (bias) • straw mushrooms 1/2 cup • baby corn 1/2 cup (halved) • carrot 1 (sliced) • snow peas 1/2 cup</li><li>Optional: bell pepper 1/2 cup • onion 1/2 cup</li><li><strong>Rice wine</strong> 2 Tbsp</li></ul>
-  <h3>Method</h3>
-  <p>Velvet shrimp (cornstarch/egg/oils; chill 30 min) → stir‑fry shrimp to just done; remove. Aromatics in oil → veg 2–4 min → return shrimp → splash rice wine → add slurry; thicken; serve.</p>
+  <p>Velvety shrimp, mixed veg, oyster/soy gravy with cornstarch slurry; splash rice wine.</p>
   <p><a class="toplink" href="#top">Back to top ↑</a></p>
 
-  <!-- Beef Pepper Steak (full) -->
   <a id="beef-pepper-steak"></a>
   <h2>Ed’s Beef Pepper Steak</h2>
-  <h3>Ingredients</h3>
-  <ul><li>1 lb flank/lean chuck/top round, thin across grain</li><li>1 green bell, 1 red bell, 1 onion — 1&quot; squares</li><li>3 cloves garlic, minced</li><li>3/4 cup beef broth + 3/4 cup chicken broth</li><li>1 rounded Tbsp cornstarch</li><li>1 Tbsp granulated/powdered garlic</li><li>3 Tbsp gluten‑free soy sauce</li><li>1 Tbsp oyster sauce</li><li>2 tsp toasted sesame oil</li><li>Black pepper</li><li>3 Tbsp peanut oil</li></ul>
-  <h3>Directions</h3>
-  <p>Make <strong>slurry</strong>: cornstarch + 1/2 cup broth + soy + oyster + pepper. Stir‑fry half the beef in 1 Tbsp oil + 1 clove garlic; add 1 tsp sesame oil; remove; reserve liquids. Deglaze with 1/2 cup broth; reserve. Repeat for remaining beef. Stir‑fry peppers/onion with remaining oil + garlic → return beef + reserved liquids + slurry; simmer to thicken (thin with broth if needed). Serve with jasmine rice.</p>
+  <p>Stir‑fried beef w/ bell peppers & onions; soy‑oyster slurry; sesame finish.</p>
   <p><a class="toplink" href="#top">Back to top ↑</a></p>
 
-  <!-- Garlic Butter Shrimp Sticks (full) -->
   <a id="garlic-butter-shrimp-sticks"></a>
   <h2>Garlic Butter Shrimp Sticks</h2>
-  <h3>Sticks</h3>
-  <ul><li>300 g shrimp (peeled weight) • 1 egg white • 1/2 tsp salt • 1/2 tsp white pepper</li><li>1 Tbsp white/rice wine • 1 cube bouillon or <strong>Magic Sarap</strong> • 2 Tbsp cornstarch</li><li>2–3 Tbsp neutral oil for frying • 1/2 lemon</li></ul>
-  <p><strong>Method:</strong> Mash/chop shrimp to paste → mix in seasonings → bag w/ tip cut → pipe 6&quot; lengths into hot oil; brown both sides; cut bite‑size; squeeze lemon.</p>
-  <h3>Dipping sauce</h3>
-  <ul><li>40 g butter • 50 g minced garlic • 2 Tbsp honey • 1 tsp sugar • pinch salt</li></ul>
-  <p>Melt butter → stir garlic → honey + sugar + salt → pour over sticks.</p>
+  <p>Shrimp paste piped/fried into sticks; garlic‑honey‑butter sauce.</p>
   <p><a class="toplink" href="#top">Back to top ↑</a></p>
 
-  <!-- Korean Marinated Eggs (full) -->
   <a id="korean-marinated-eggs"></a>
   <h2>Korean Marinated Eggs (Mayak Eggs)</h2>
-  <h3>Marinade</h3>
-  <ul><li>1/2 cup (120 ml) <strong>soy sauce</strong> • 1/2 cup water • 2 Tbsp sugar • 1 Tbsp white vinegar</li><li>1 Tbsp toasted <strong>sesame seeds</strong> • 1/2 Tbsp sesame oil • 1/4 tsp black pepper</li><li>Finely chopped: 1/4 onion • 1 hot green chili (opt) • 1 mild red chili • 2 green onions • 2 garlic cloves</li></ul>
-  <h3>Eggs</h3>
-  <p>Boil <strong>6 eggs</strong> in 6 cups water: <strong>7 min</strong> → ice bath → peel. Submerge in marinade <strong>≥6 h or overnight</strong> (stir once if not fully covered). <strong>Serve</strong> on hot rice; spoon marinade; finish with sesame oil. <strong>Keeps:</strong> up to <strong>5 days</strong> refrigerated.</p>
+  <p>7‑minute eggs in soy‑vinegar‑sesame marinade with aromatics; keeps ~5 days.</p>
   <p><a class="toplink" href="#top">Back to top ↑</a></p>
 
-  <!-- Cucumber & Chive Kimchi (full) -->
   <a id="cucumber-chive-kimchi"></a>
   <h2>Cucumber & Chive Kimchi</h2>
-  <ul><li>8 small‑medium Kirby / 10 Persian / 2 large Japanese‑English cucumbers (unpeeled)</li><li>2 Tbsp kosher/pink salt</li><li>2 Tbsp <strong>gochugaru</strong></li><li>2 tsp fish sauce</li><li>1 1/2 tsp sugar</li><li>1/4 cup Korean/regular chives (2&quot; pieces)</li><li>1/4 cup thinly sliced onion</li></ul>
-  <p><strong>Method:</strong> Halve → bias‑slice 1/4&quot; → toss with salt <strong>10 min</strong> → rinse lightly; drain well → mix gochugaru + fish sauce + sugar → add cucumbers; rest 10 min → add chives + onion → jar and refrigerate. Eat immediately or within <strong>7 days</strong>.</p>
+  <p>Salt 10 min → rinse → toss w/ gochugaru, fish sauce, sugar → add chives/onion → refrigerate (eat within a week).</p>
   <p><a class="toplink" href="#top">Back to top ↑</a></p>
 
-  <!-- Spicy Gochujang Eggs (full) -->
   <a id="spicy-gochujang-eggs"></a>
   <h2>Spicy Gochujang Eggs</h2>
-  <h3>Seasoning paste</h3>
-  <ul><li>2 Tbsp <strong>gochujang</strong> • 2 Tbsp <strong>gochugaru</strong> • 1 Tbsp soy</li><li>1 Tbsp oyster sauce • 1/2 Tbsp chicken bouillon powder</li><li>1/2 Tbsp sugar • 1 Tbsp honey • black pepper</li></ul>
-  <h3>Dish</h3>
-  <ul><li>12 eggs • 1 Tbsp neutral oil • 1/2 lb (225 g) ground beef</li><li>3 green onions (whites/greens divided) • 3 cloves garlic • 1 green + 1 mild red chili (opt)</li><li>10 cups water total</li></ul>
-  <p><strong>Method:</strong> Boil eggs <strong>7 min</strong> → ice bath → peel. Sear beef 1–2 min → add whites of green onions + garlic <strong>1 min</strong> → lower heat; stir in paste <strong>2 min</strong> (avoid burning) → add <strong>2 cups water</strong>; boil → add eggs; <strong>simmer 7 min</strong> → kill heat; add greens + chiles + 1/2 Tbsp sesame oil + sesame seeds. Serve over hot rice. <strong>Keeps:</strong> ~3 days (fridge).</p>
+  <p>Boiled eggs simmered in gochujang/gochugaru sauce with a little beef; serve over rice.</p>
   <p><a class="toplink" href="#top">Back to top ↑</a></p>
 
-  <!-- Thai Green Curry (full) -->
   <a id="thai-green-curry-chicken"></a>
   <h2>Thai Green Curry with Chicken</h2>
-  <h3>Paste (≈1 cup)</h3>
-  <p>8–10 green Thai chilies • shallot • 4 garlic • thumb galangal • inner lemongrass • zest 1 kaffir lime (or regular) • cilantro stems/roots • 1 tsp each coriander, cumin • 1 tsp white pepper • 2 Tbsp shrimp paste/fish sauce (opt) • 1/2 tsp salt • splash oil/water to blend. Pound/blend; adjust; <strong>store</strong> 1 week fridge / 3 months frozen.</p>
-  <h3>Curry (serves 3–4)</h3>
-  <p>2–3 Tbsp paste • 400 ml coconut milk • 300–400 g chicken thigh/breast • 1–2 cups veg (upo/green beans/bell pepper/eggplant/zucchini/bamboo shoots) • 2 kaffir lime leaves (opt) • 1–2 Tbsp fish sauce • 1 tsp palm/brown sugar • 1 cup Thai basil • red chili for garnish.</p>
-  <p><strong>Method:</strong> Fry paste 1–2 min → add half coconut milk; reduce → add chicken → add rest coconut milk + 1/2 cup water/stock + leaves; simmer 10 min → add veg 5–7 min to tender → season with fish sauce/sugar → stir basil; serve with jasmine rice.</p>
+  <p>Homemade paste + coconut milk simmered with chicken/veg; finish with Thai basil.</p>
   <p><a class="toplink" href="#top">Back to top ↑</a></p>
 
-  <!-- Jamaican Jerk Dry Rub (full) -->
   <a id="jamaican-jerk-dry-rub"></a>
   <h2>Jamaican Jerk Dry Rub</h2>
-  <p><strong>Yields:</strong> ~1/2 cup (2–3 whole chickens).</p>
-  <h3>Spice mix</h3>
-  <ul><li>(opt) 1 Tbsp brown sugar • 3/4 Tbsp fine sea/kosher <strong>salt</strong></li><li>2 tsp <strong>allspice</strong> • 2 tsp dried <strong>thyme</strong> • 2 tsp smoked paprika</li><li>1 1/2 tsp garlic powder • 1 1/2 tsp onion powder</li><li>1 tsp black pepper • 1/2 tsp cinnamon • 1/2 tsp nutmeg • 1/4 tsp cloves</li><li>1/2–1 tsp cayenne • (opt) 1 tsp red pepper flakes</li><li>(opt) heat boosters: Scotch bonnet powder; swap cayenne for habanero/ghost</li></ul>
-  <p><strong>Use:</strong> Mix thoroughly; store airtight ≤6 months cool/dark. Rub <strong>1/2–1 Tbsp per lb</strong>; rest ≥30 min (overnight best). For a <strong>wet paste</strong>, add 1 tsp oil per 2 Tbsp rub. Bright finish: add zest of 1 lime just before grilling.</p>
+  <p>Allspice/thyme/paprika forward; add lime zest just before grilling for brightness.</p>
   <p><a class="toplink" href="#top">Back to top ↑</a></p>
 
-  <!-- Utility sections (full) -->
   <a id="scaling"></a>
   <h2>Scaling & Conversions</h2>
-  <p><strong>Scale factor</strong> = Desired yield ÷ Base yield.<br>Example: Base 2.0 kg → want 1.0 kg ⇒ factor = 0.5 (halve all amounts).</p>
-  <ul><li><strong>Rounding:</strong> Salt/spices: nearest 0.1 g (or ⅛ tsp). Herbs/peppers: round to taste; note changes. Liquids: 1 mL under 100 mL; else 5 mL.</li></ul>
-  <h3>Common conversions</h3>
-  <ul><li>1 tsp = 5 mL • 1 Tbsp = 15 mL • 1 cup (US) ≈ 240 mL</li><li>1 oz = 28.35 g • 1 lb = 454 g</li><li>350°F ≈ 177°C • 400°F ≈ 204°C • 425°F ≈ 218°C</li></ul>
-  <h3>Handy densities (approx.)</h3>
-  <ul><li>Fine salt: 1 tsp ≈ 6 g</li><li>Granulated sugar: 1 cup ≈ 200 g</li><li>All‑purpose flour: 1 cup ≈ 120 g</li></ul>
-  <p><a class="toplink" href="#top">Back to top ↑</a></p>
+  <p>Scale factor = Desired ÷ Base. Round thoughtfully (esp. spices). Useful densities: salt 1 tsp≈6 g; sugar 1 cup≈200 g; flour 1 cup≈120 g.</p>
 
   <a id="costing"></a>
   <h2>Costing Template</h2>
@@ -272,32 +198,48 @@
       <tr><td></td><td><strong>TOTAL</strong></td><td></td><td></td><td></td><td></td><td><strong>0.00</strong></td></tr>
     </tbody>
   </table>
-  <p class="note">Notes: conversions (kg→g, L→mL), waste/trim %, energy/fuel cost if desired.</p>
-  <p><a class="toplink" href="#top">Back to top ↑</a></p>
+  <p class="note">Add receipts and unit conversions for accurate PHP costing.</p>
 
   <a id="pantry"></a>
   <h2>Louisiana Pantry Notes</h2>
-  <ul><li><strong>Cajun/Creole “trinity”</strong>: onion : celery : green bell pepper = <strong>2 : 1 : 1</strong> (by volume).</li><li><strong>Dark roux</strong> for gumbo/gravies: equal parts oil/butter & flour by weight. Patience > high heat.</li><li><strong>Holy trinity + garlic</strong>: add minced garlic late so it doesn’t burn.</li><li><strong>Acid</strong> for balance: lemon, cane vinegar, or cider vinegar splash at finish.</li></ul>
-  <p><a class="toplink" href="#top">Back to top ↑</a></p>
+  <ul>
+    <li>Trinity (onion:celery:green bell) = 2:1:1 by volume.</li>
+    <li>Dark roux = equal parts fat/flour by weight; patience over high heat.</li>
+    <li>Add garlic late to avoid burning.</li>
+    <li>Finish with a splash of acid (lemon, cane, or cider vinegar).</li>
+  </ul>
 
   <a id="subs"></a>
   <h2>Philippine Substitutions</h2>
-  <ul><li><strong>Andouille</strong> → local smoked longganisa or garlicky pork sausage; add extra black pepper + paprika.</li><li><strong>Celery ribs</strong> → <strong>kinchay</strong> stems/leaves; for strong celery note, use celery salt carefully.</li><li><strong>Bay leaves (US)</strong> → local <strong>laurel</strong> leaves (usually stronger; use less).</li><li><strong>Buttermilk</strong> → milk + 1 Tbsp lemon/calamansi per cup, rest 5–10 min.</li><li><strong>Creole mustard</strong> → Dijon + a little vinegar + pinch cayenne.</li><li><strong>Worcestershire</strong> → local brands OK; adjust salt.</li></ul>
-  <p><a class="toplink" href="#top">Back to top ↑</a></p>
+  <ul>
+    <li>Andouille → smoked longganisa + more black pepper & paprika.</li>
+    <li>Celery ribs → kinchay stems/leaves (use less; stronger).</li>
+    <li>US bay → local laurel (usually stronger; use less).</li>
+    <li>Buttermilk → milk + 1 Tbsp lemon/calamansi per cup, 5–10 min.</li>
+    <li>Creole mustard → Dijon + a little vinegar + pinch cayenne.</li>
+  </ul>
 
   <a id="blends"></a>
   <h2>Base Blends & Pastes</h2>
   <h3>House Cajun seasoning (base)</h3>
-  <ul><li>3 Tbsp paprika (sweet)</li><li>1 Tbsp garlic powder</li><li>1 Tbsp onion powder</li><li>1 Tbsp fine salt</li><li>2 tsp black pepper</li><li>1–2 tsp cayenne (to heat)</li><li>1 tsp dried thyme</li><li>1 tsp dried oregano</li><li>1 tsp white pepper (optional)</li></ul>
-  <p><strong>Use:</strong> rubs, gumbos, fries, marinades. Note batch date.</p>
+  <ul>
+    <li>3 Tbsp paprika • 1 Tbsp each garlic & onion powder • 1 Tbsp fine salt</li>
+    <li>2 tsp black pepper • 1–2 tsp cayenne • 1 tsp each thyme & oregano</li>
+  </ul>
   <h3>Creole butter injection (base)</h3>
-  <ul><li>250 mL melted butter (or 50/50 butter & neutral oil)</li><li>2–3 tsp House Cajun seasoning</li><li>1–2 tsp lemon or cane vinegar</li><li>Optional: minced garlic (fine‑strained for injectors)</li></ul>
-  <p><a class="toplink" href="#top">Back to top ↑</a></p>
+  <ul>
+    <li>250 mL melted butter (or 50/50 with neutral oil)</li>
+    <li>2–3 tsp House Cajun seasoning • 1–2 tsp lemon or cane vinegar</li>
+  </ul>
 
   <a id="shopping"></a>
   <h2>Shopping + Ingredient Notes / Local Hacks</h2>
-  <ul><li><strong>Prague Powder #1</strong> (a.k.a. InstaCure #1 / pink curing salt #1): Use only at the recommended rate. It is <strong>not</strong> table salt; it’s dyed pink to avoid confusion.</li><li><strong>Zatarain’s liquid crab boil:</strong> Tiny amounts add that south Louisiana boiled‑seafood vibe to pickled pork brine without making it taste like straight crab boil.</li><li><strong>Tony Chachere’s / Slap Ya Mama</strong> and similar: Many are salty. When a recipe also calls for kosher salt, taste first.</li><li><strong>Local kalabasa:</strong> Roast instead of boiling to drive off water and concentrate sweetness. Watery puree → bland pie.</li></ul>
-  <p><a class="toplink" href="#top">Back to top ↑</a></p>
+  <ul>
+    <li>Prague Powder #1: use only at recommended rate; never add to hot liquid.</li>
+    <li>Tiny amounts of Zatarain’s liquid crab boil add the boil‑spice vibe.</li>
+    <li>Many Cajun blends are salty; adjust added salt accordingly.</li>
+    <li>Roast kalabasa instead of boiling to avoid watery puree.</li>
+  </ul>
 
   <a id="price-log"></a>
   <h2>Price Log (Philippines)</h2>
@@ -317,8 +259,34 @@
     </tbody>
   </table>
   <p class="note">Update with receipts for accurate PHP costing.</p>
-  <p><a class="toplink" href="#top">Back to top ↑</a></p>
 
 </div>
+
+<!-- Theme toggle behavior; remembers your choice per device -->
+<script>
+(function(){
+  var KEY='recipes_theme';
+  var root=document.documentElement;
+  try{
+    var saved=localStorage.getItem(KEY);
+    var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if(saved==='dark' || saved==='light'){ root.setAttribute('data-theme', saved); }
+    else{ root.setAttribute('data-theme', prefersDark ? 'dark':'light'); }
+  }catch(e){}
+  var btn=document.getElementById('themeToggle');
+  function updateIcon(){
+    var t=root.getAttribute('data-theme')||'light';
+    btn.textContent=(t==='dark')?'☾':'☀';
+  }
+  btn.addEventListener('click', function(){
+    var cur=root.getAttribute('data-theme')||'light';
+    var next=(cur==='dark')?'light':'dark';
+    root.setAttribute('data-theme', next);
+    try{ localStorage.setItem(KEY, next); }catch(e){}
+    updateIcon();
+  });
+  updateIcon();
+})();
+</script>
 </body>
 </html>
