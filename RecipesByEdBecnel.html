@@ -7,12 +7,12 @@
 <style>
   :root{
     /* Default (dark) palette */
-    --bg:#0f1115; --card:#151923; --ink:#e8eaf2; --muted:#aeb4c6; --accent:#77c7ff;
+    --bg:#0f1115; --card:#151923; --ink:#f5f6fa; --muted:#aeb4c6; --accent:#77c7ff;
     --link:#8edbff; --rule:#252a36;
   }
   /* If the device prefers light, use light palette */
   @media (prefers-color-scheme: light){
-    :root{ --bg:#fff; --card:#f8fafc; --ink:#0f172a; --muted:#475569; --accent:#0ea5e9; --link:#0284c7; --rule:#e2e8f0; }
+    :root{ --bg:#fff; --card:#f8fafc; --ink:#1e293b; --muted:#475569; --accent:#0ea5e9; --link:#0284c7; --rule:#e2e8f0; }
   }
   html,body{margin:0; padding:0; background:var(--bg); color:var(--ink); font:16px/1.55 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";}
   .wrap{max-width: 900px; margin: 40px auto; padding: 0 16px 80px;}
@@ -37,11 +37,11 @@
 <!-- Manual theme override (has higher precedence) and toggle button styles -->
 <style>
   html[data-theme="dark"]{
-    --bg:#0f1115; --card:#151923; --ink:#e8eaf2; --muted:#aeb4c6; --accent:#77c7ff;
+    --bg:#0f1115; --card:#151923; --ink:#f5f6fa; --muted:#aeb4c6; --accent:#77c7ff;
     --link:#8edbff; --rule:#252a36;
   }
   html[data-theme="light"]{
-    --bg:#ffffff; --card:#f8fafc; --ink:#0f172a; --muted:#475569; --accent:#0ea5e9;
+    --bg:#ffffff; --card:#f8fafc; --ink:#1e293b; --muted:#475569; --accent:#0ea5e9;
     --link:#0284c7; --rule:#e2e8f0;
   }
   .theme-toggle{
@@ -50,6 +50,40 @@
     border: 1px solid var(--rule); border-radius: 999px;
     padding: 8px 12px; cursor: pointer; font: 14px/1 system-ui, sans-serif;
     box-shadow: 0 2px 6px rgba(0,0,0,.2);
+  }
+  .print-btn{
+    background: var(--card); color: var(--ink);
+    border: 1px solid var(--rule); border-radius: 6px;
+    padding: 6px 12px; cursor: pointer; font: 14px/1 system-ui, sans-serif;
+    margin-top: 8px; display: inline-block;
+  }
+  .print-btn:hover{
+    background: var(--accent); color: var(--bg);
+  }
+  /* Print styles */
+  @media print{
+    @page { 
+      margin: 1in 1in 1.25in 1in;
+      @bottom-center {
+        content: counter(page) " / " counter(pages);
+        font-size: 10pt;
+        color: #000000;
+      }
+    }
+    .theme-toggle, .print-btn, .toc, .toplink, h1, .intro { display: none !important; }
+    body { background: white !important; color: #000000 !important; margin: 0; padding: 0; }
+    .wrap { max-width: 100%; margin: 0; padding: 0; }
+    .wrap > *:not(.print-target) { display: none !important; }
+    .print-target { display: block !important; color: #000000 !important; page-break-inside: auto; }
+    h2, h3, h4 { color: #000000 !important; page-break-after: avoid; page-break-inside: avoid; }
+    p, li, td, th { color: #000000 !important; }
+    p { page-break-inside: avoid; orphans: 3; widows: 3; }
+    h2 { border-top: none; margin-top: 0; }
+    ul, ol { page-break-before: avoid; page-break-inside: auto; }
+    li { page-break-inside: avoid; }
+    table { page-break-inside: auto; }
+    tr { page-break-inside: avoid; }
+    a[id] { display: block !important; }
   }
 </style>
 </head>
@@ -1344,116 +1378,108 @@
 <li>Fold the top over the side with the beef.</li>
 <li>Cut in half lengthwise and serve.</li>
 </ul>
-  <p><a class="toplink" href="#top">Back to top ↑</a></p>
-
-  <section id="new-york-style-pizza" class="recipe">
-  <h2>New York Style Pizza</h2>
-
-  <p><em>Source: <a href="https://youtu.be/SDpCzJw2xm4?si=ErmDLKSNPLJDwTiv" target="_blank" rel="noopener">Adam Ragusea – New York Style Pizza at Home</a></em></p>
-  <p><strong>Makes:</strong> Four pizzas</p>
-  <p><strong>Note:</strong> Quantities here are slightly updated from those shown in the YouTube video.</p>
-
-  <h3>Ingredients</h3>
-
-  <h4>Dough</h4>
-  <ul>
-    <li>2¼ cups (530 ml) warm water</li>
-    <li>1 tbsp sugar (12 g)</li>
-    <li>1 tbsp (9 g) active dry yeast</li>
-    <li>2 tbsp (30 ml) olive oil</li>
-    <li>1 tbsp (18 g) kosher salt</li>
-    <li>5 cups (600 g) bread flour, plus more for working the dough</li>
-    <li>Additional olive oil for greasing the dough and containers</li>
-    <li>Cornmeal, semolina flour, or coarse-ground whole wheat flour for dusting</li>
-  </ul>
-
-  <h4>Sauce</h4>
-  <ul>
-    <li>1 × 28 oz (828 ml) can crushed tomatoes (e.g. Pastene "Kitchen Ready")</li>
-    <li>2–4 tbsp (30–60 ml) olive oil</li>
-    <li>1 tsp (4 g) sugar</li>
-    <li>2 tsp dried oregano (a fraction of a gram)</li>
-  </ul>
-
-  <h4>Cheese</h4>
-  <ul>
-    <li>24–32 oz (680–910 g) whole-milk, low-moisture mozzarella, freshly grated (6–8 oz / 170–225 g per pizza)</li>
-    <li>Grated parmesan for dusting (about 10 g per pizza)</li>
-  </ul>
-
-  <h3>Dough Instructions</h3>
-  <ol>
-    <li>
-      In a large bowl, combine the warm water, sugar, and yeast. Let sit a few minutes until the yeast goes foamy.
-      If it does, the yeast is alive and you can proceed; if not, discard and start over with new yeast.
-    </li>
-    <li>
-      Add the olive oil, salt, and 5 cups (600 g) of bread flour. Mix until just combined, then start kneading.
-    </li>
-    <li>
-      Knead the dough, adding just enough additional flour to keep it workable (not too sticky),
-      until you can stretch a small piece into a thin sheet without tearing.
-      (You will probably need to add quite a bit more flour; the 5 cups is just a baseline to get you started.)
-    </li>
-    <li>
-      Divide the dough into four equal balls and put them into four containers (ideally glass).
-      Lightly coat the dough balls and the interior of the containers with olive oil.
-    </li>
-    <li>
-      Cover and either:
-      <ul>
-        <li>Let rise at room temperature for about 2 hours, or</li>
-        <li>Refrigerate and let rise for 1–7 days (the long, cold rise is preferable for flavor and texture - See <a href="#pizza-dough-reference">notes</a> in reference section below).</li>
-      </ul>
-    </li>
-    </ol>
-  <h3>Baking Instructions</h3>
-  <ol>
-    <li>
-      When you're ready to bake, place a pizza stone or pizza steel in the oven
-      (many ovens work best with it on a high rack, but this can vary) and preheat
-      to your highest possible temperature, ideally with convection, for a full hour.
-    </li>
-    <li>
-      For the sauce, simply stir together the crushed tomatoes, olive oil, sugar, and dried oregano.
-    </li>
-    <li>
-      Liberally dust a pizza peel with cornmeal (or semolina / coarse whole wheat flour).
-    </li>
-    <li>
-      Take one dough ball out of the fridge and dust it in flour. Stretch it to the widest size and shape
-      that will comfortably fit on your peel and stone/steel.
-    </li>
-    <li>
-      Top with just enough sauce to lightly coat the surface. Dust the sauce layer with grated parmesan,
-      then cover with mozzarella (6–8 oz / 170–225 g per pizza).
-    </li>
-    <li>
-      Transfer the pizza to the stone/steel and bake until the crust is well-browned and the cheese has
-      browned in spots but hasn't started oozing an orange grease layer, about 6–7 minutes (depending on
-      oven and stone/steel).
-    </li>
-  </ol>
-  <h3 id="pizza-dough-reference">Reference (for pizza dough)</h3>
-  <h4>After the 2-hour room-temp rise</h4>
-  <ul>
-    <li>Gently punch down / degas the dough (don’t mash it to death, just press out big bubbles).</li>
-    <li>Divide and ball the dough into individual pizza portions if you haven’t already.</li>
-    <li>Lightly oil the dough balls and the container to prevent sticking.</li>
-    <li>Put them into covered containers or a pan wrapped tightly in plastic wrap.</li>
-  </ul>
-  <h4>Refrigeration time</h4>
-  <ul>
-    <li>The fridge just slows the yeast, it doesn’t stop it.</li>
-    <li>Most pizza doughs can cold-ferment anywhere from 8 hours up to 2–3 days, depending on how much yeast you used and how soft the dough is. Longer cold fermentation usually gives better flavor and texture.</li>
-  </ul>
-  <h4>Before you make the pizza</h4>
-  <ul>
-    <li>Take the dough out of the refrigerator 30–60 minutes before shaping (sometimes up to 90 minutes if your kitchen is cool).</li>
-    <li>Let it warm slightly and relax so it will stretch without springing back.</li>
-
+<p><a class="toplink" href="#top">Back to top ↑</a></p>
+<a id="new-york-style-pizza"></a>
+<h2>New York Style Pizza</h2>
+<p><em>Source: <a href="https://youtu.be/SDpCzJw2xm4?si=ErmDLKSNPLJDwTiv" target="_blank" rel="noopener">Adam Ragusea – New York Style Pizza at Home</a></em></p>
+<p><strong>Makes:</strong> Four pizzas</p>
+<p><strong>Note:</strong> Quantities here are slightly updated from those shown in the YouTube video.</p>
+<h3>Ingredients</h3>
+<h4>Dough</h4>
+<ul>
+  <li>2¼ cups (530 ml) warm water</li>
+  <li>1 tbsp sugar (12 g)</li>
+  <li>1 tbsp (9 g) active dry yeast</li>
+  <li>2 tbsp (30 ml) olive oil</li>
+  <li>1 tbsp (18 g) kosher salt</li>
+  <li>5 cups (600 g) bread flour, plus more for working the dough</li>
+  <li>Additional olive oil for greasing the dough and containers</li>
+  <li>Cornmeal, semolina flour, or coarse-ground whole wheat flour for dusting</li>
+</ul>
+<h4>Sauce</h4>
+<ul>
+  <li>1 × 28 oz (828 ml) can crushed tomatoes (e.g. Pastene "Kitchen Ready")</li>
+  <li>2–4 tbsp (30–60 ml) olive oil</li>
+  <li>1 tsp (4 g) sugar</li>
+  <li>2 tsp dried oregano (a fraction of a gram)</li>
+</ul>
+<h4>Cheese</h4>
+<ul>
+  <li>24–32 oz (680–910 g) whole-milk, low-moisture mozzarella, freshly grated (6–8 oz / 170–225 g per pizza)</li>
+  <li>Grated parmesan for dusting (about 10 g per pizza)</li>
+</ul>
+<h3>Dough Instructions</h3>
+<ol>
+  <li>
+    In a large bowl, combine the warm water, sugar, and yeast. Let sit a few minutes until the yeast goes foamy.
+    If it does, the yeast is alive and you can proceed; if not, discard and start over with new yeast.
+  </li>
+  <li>
+    Add the olive oil, salt, and 5 cups (600 g) of bread flour. Mix until just combined, then start kneading.
+  </li>
+  <li>
+    Knead the dough, adding just enough additional flour to keep it workable (not too sticky),
+    until you can stretch a small piece into a thin sheet without tearing.
+    (You will probably need to add quite a bit more flour; the 5 cups is just a baseline to get you started.)
+  </li>
+  <li>
+    Divide the dough into four equal balls and put them into four containers (ideally glass).
+    Lightly coat the dough balls and the interior of the containers with olive oil.
+  </li>
+  <li>
+    Cover and either:
+    <ul>
+      <li>Let rise at room temperature for about 2 hours, or</li>
+      <li>Refrigerate and let rise for 1–7 days (the long, cold rise is preferable for flavor and texture - See <a href="#pizza-dough-reference">notes</a> in reference section below).</li>
+    </ul>
+  </li>
+</ol>
+<h3>Baking Instructions</h3>
+<ol>
+  <li>
+    When you're ready to bake, place a pizza stone or pizza steel in the oven
+    (many ovens work best with it on a high rack, but this can vary) and preheat
+    to your highest possible temperature, ideally with convection, for a full hour.
+  </li>
+  <li>
+    For the sauce, simply stir together the crushed tomatoes, olive oil, sugar, and dried oregano.
+  </li>
+  <li>
+    Liberally dust a pizza peel with cornmeal (or semolina / coarse whole wheat flour).
+  </li>
+  <li>
+    Take one dough ball out of the fridge and dust it in flour. Stretch it to the widest size and shape
+    that will comfortably fit on your peel and stone/steel.
+  </li>
+  <li>
+    Top with just enough sauce to lightly coat the surface. Dust the sauce layer with grated parmesan,
+    then cover with mozzarella (6–8 oz / 170–225 g per pizza).
+  </li>
+  <li>
+    Transfer the pizza to the stone/steel and bake until the crust is well-browned and the cheese has
+    browned in spots but hasn't started oozing an orange grease layer, about 6–7 minutes (depending on
+    oven and stone/steel).
+  </li>
+</ol>
+<h3 id="pizza-dough-reference">Reference (for pizza dough)</h3>
+<h4>After the 2-hour room-temp rise</h4>
+<ul>
+  <li>Gently punch down / degas the dough (don’t mash it to death, just press out big bubbles).</li>
+  <li>Divide and ball the dough into individual pizza portions if you haven’t already.</li>
+  <li>Lightly oil the dough balls and the container to prevent sticking.</li>
+  <li>Put them into covered containers or a pan wrapped tightly in plastic wrap.</li>
+</ul>
+<h4>Refrigeration time</h4>
+<ul>
+  <li>The fridge just slows the yeast, it doesn’t stop it.</li>
+  <li>Most pizza doughs can cold-ferment anywhere from 8 hours up to 2–3 days, depending on how much yeast you used and how soft the dough is. Longer cold fermentation usually gives better flavor and texture.</li>
+</ul>
+<h4>Before you make the pizza</h4>
+<ul>
+  <li>Take the dough out of the refrigerator 30–60 minutes before shaping (sometimes up to 90 minutes if your kitchen is cool).</li>
+  <li>Let it warm slightly and relax so it will stretch without springing back.</li>
+</ul>
   <p class="categories"><strong>Categories:</strong> Italian</p>
-</section>
   <p><a class="toplink" href="#top">Back to top ↑</a></p>
 
   <a id="singapore-noodles"></a>
@@ -1870,6 +1896,62 @@
     updateIcon();
   });
   updateIcon();
+})();
+
+// Add print buttons to each recipe
+(function(){
+  // Find all h2 elements (recipe titles)
+  var h2s = document.querySelectorAll('.wrap > h2');
+  
+  h2s.forEach(function(h2){
+    // Skip if this is in the toc or other non-recipe sections
+    var prevElement = h2.previousElementSibling;
+    if(!prevElement || prevElement.tagName !== 'A') return;
+    
+    var recipeId = prevElement.id;
+    if(!recipeId) return;
+    
+    // Create print button
+    var btn = document.createElement('button');
+    btn.className = 'print-btn';
+    btn.textContent = '🖨️ Print Recipe';
+    btn.setAttribute('aria-label', 'Print this recipe');
+    
+    // Add click handler
+    btn.addEventListener('click', function(){
+      // Find the recipe content (from anchor to next anchor or end)
+      var recipeStart = prevElement;
+      var recipeContent = [recipeStart, h2];
+      var current = h2.nextElementSibling;
+      
+      while(current){
+        if(current.tagName === 'A' && current.id){
+          break; // Found next recipe
+        }
+        // Skip the print button itself
+        if(!current.classList.contains('print-btn')){
+          recipeContent.push(current);
+        }
+        current = current.nextElementSibling;
+      }
+      
+      // Mark recipe for printing
+      recipeContent.forEach(function(el){
+        el.classList.add('print-target');
+      });
+      
+      // Print
+      window.print();
+      
+      // Clean up
+      recipeContent.forEach(function(el){
+        el.classList.remove('print-target');
+      });
+    });
+    
+    // Insert button after h2
+    h2.parentNode.insertBefore(btn, h2.nextSibling);
+  });
 })();
 </script>
 </body>
